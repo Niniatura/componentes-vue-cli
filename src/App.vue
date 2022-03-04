@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mi-tabla :array="numbers" :class="newClass" :boolean="boolean"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import './components/MiTabla.css'
+import MiTabla from './components/MiTabla.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MiTabla
+  },
+  data: function () {
+    return {
+      numbers:[1,2,34,4],
+      newClass:"table-info",
+      boolean:true 
+    }
   }
 }
 </script>
